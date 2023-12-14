@@ -11,6 +11,7 @@ const Chats = lazy(() => import('./pages/Chats'))
 const SingleChat = lazy(() => import('./pages/SingleChat'))
 const Account = lazy(() => import('./pages/Account'))
 const Search = lazy(() => import('./pages/Search'))
+const PageNotFound = lazy(() => import('./pages/PageNotFound'))
 
 const App = () => {
     const [roomId, setRoomId] = useState('')
@@ -44,9 +45,13 @@ const App = () => {
                                     />
                                 }
                             />
-                            <Route path="search" element={<Search setRoomId={setRoomId} />} />
+                            <Route
+                                path="search"
+                                element={<Search setRoomId={setRoomId} />}
+                            />
                             <Route path="account" element={<Account />} />
                         </Route>
+                        <Route path="*" element={<PageNotFound />} />
                     </Routes>
                 </Suspense>
             </BrowserRouter>
