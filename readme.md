@@ -76,6 +76,3 @@ Check out the working preview of the app at [https://chat-app-jiyade.netlify.app
 - Vite
 - Tailwind CSS
 
-## License
-
-This project is licensed under the [MIT License](LICENSE.md).
